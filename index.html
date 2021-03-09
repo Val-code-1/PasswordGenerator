@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Val's Password Generator</title>
+    <link href="Password.css" type="stylesheet">
+</head>
+<body>
+    <h1>Val's Password Generator</h1>
+    <div>Pasword Length</div>
+    <div>
+        <select id="length">
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    </div>
+    <div>Upper Case</div>
+    <div>
+        <input type="checkbox" id="upperCaseCheck">
+    </div>
+    <div>Lower Case</div>
+    <div>
+        <input type="checkbox" id="lowerCaseCheck">
+    </div>
+    <div>Numbers</div>
+    <div>
+        <input type="checkbox" id="numbersCheck">
+    </div>
+    <div>Symbols</div>
+    <div>
+        <input type="checkbox" id="symbolsCheck">
+    </div>
+    <button id="generateButton">Generate</button>
+    <div>
+        <input type="text" id="passwordGenerated">
+    </div>
+    <script src="Password.js"></script>
+</body>
+</html>
