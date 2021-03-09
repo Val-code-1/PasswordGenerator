@@ -86,25 +86,13 @@ function allTogether(number, all) {
     take(all);
   }
 }
-function select() {
-  passwordGenerated.select();
-}
+
 generateButton.addEventListener("click", () => {
   let number = lengthDropdown.value;
   console.log(number);
   passwordGenerated.value = "";
   let all = combineCharacters();
   allTogether(number, all);
-  select();
+  passwordGenerated.select();
   console.log("full string: " + [all]);
-  // console.log(all.length);
-  //   console.log("upperCaseChecked :" + upperCaseCheck.checked);
-  //   console.log("lowerCaseChecked :" + lowerCaseCheck.checked);
-  //   console.log("numbersChecked :" + numbersCheck.checked);
-  //   console.log("symbolsChecked :" + symbolsCheck.checked);
 });
-
-// upperCase(arABC);
-// lowerCase(arabc);
-//;
-// symbols(arSymb);
