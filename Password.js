@@ -20,67 +20,67 @@ let symb = "!@#$%^&()-=+?";
 function upperCase(ABC) {
   if (upperCaseCheck.checked === true) {
     console.log("UC check is on");
-    arABC = ABC.split("");
+    let arABC = ABC.split("");
     console.log(arABC);
     return arABC;
   } else {
     console.log("UC check is off");
-    arABC = [];
+    let arABC = [];
     return arABC;
   }
 }
 function lowerCase(abc) {
   if (lowerCaseCheck.checked === true) {
     console.log("LC check is on");
-    arabc = abc.split("");
+    let arabc = abc.split("");
     console.log(arabc);
     return arabc;
   } else {
     console.log("LC check is off");
-    arabc = [];
+    let arabc = [];
     return arabc;
   }
 }
 function numbers(numb) {
   if (numbersCheck.checked === true) {
     console.log("# check is on");
-    arNumb = numb.split("");
+    let arNumb = numb.split("");
     console.log(arNumb);
     return arNumb;
   } else {
     console.log("# check is off");
-    arNumb = [];
+    let arNumb = [];
     return arNumb;
   }
 }
 function symbols(symb) {
   if (symbolsCheck.checked === true) {
     console.log("sym check is on");
-    arSymb = symb.split("");
+    let arSymb = symb.split("");
     console.log(arSymb);
     return arSymb;
   } else {
     console.log("sym check is off");
-    arSymb = [];
+    let arSymb = [];
     return arSymb;
   }
 }
 function combineCharacters() {
-  upperCase(ABC);
-  lowerCase(abc);
-  numbers(numb);
-  symbols(symb);
-  return (all = arABC.concat(arabc, arNumb, arSymb));
+  let arABC = upperCase(ABC);
+  let arabc = lowerCase(abc);
+  let arNumb = numbers(numb);
+  let arSymb = symbols(symb);
+  return arABC.concat(arabc, arNumb, arSymb);
 }
 function take(all) {
-  randomNumber = Math.random();
-  x = Math.floor(randomNumber * all.length);
+  let randomNumber = Math.random();
+  let x = Math.floor(randomNumber * all.length);
   // console.log("random number in the string: " + x);
-  thisOne = all[x];
+  let thisOne = all[x];
   console.log(thisOne);
   passwordGenerated.value = passwordGenerated.value + thisOne;
 }
-function allTogether(number) {
+function allTogether(number, all) {
   for (let i = 0; i < number; i++) {
     // console.log([i]);
     take(all);
@@ -93,8 +93,8 @@ generateButton.addEventListener("click", () => {
   let number = lengthDropdown.value;
   console.log(number);
   passwordGenerated.value = "";
-  combineCharacters();
-  allTogether(number);
+  let all = combineCharacters();
+  allTogether(number, all);
   select();
   console.log("full string: " + [all]);
   // console.log(all.length);
