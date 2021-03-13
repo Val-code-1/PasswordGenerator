@@ -92,7 +92,17 @@ generateButton.addEventListener("click", () => {
   console.log(number);
   passwordGenerated.value = "";
   let all = combineCharacters();
-  allTogether(number, all);
-  passwordGenerated.select();
-  console.log("full string: " + [all]);
+  console.log("all:", all);
+  if (
+    !upperCaseCheck.checked &&
+    !lowerCaseCheck.checked &&
+    !numbersCheck.checked &&
+    !symbolsCheck.checked
+  ) {
+    passwordGenerated.value = "Check a box for a password!";
+  } else {
+    allTogether(number, all);
+    passwordGenerated.select();
+    console.log("full string: " + [all]);
+  }
 });
